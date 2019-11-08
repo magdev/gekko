@@ -40,6 +40,6 @@ RUN mv /app/docker-entrypoint.sh /entrypoint.sh \
     && chmod +x /entrypoint.sh \
     && alias gekko="node /app/gekko"
 ENTRYPOINT ["/entrypoint.sh"]
-VOLUME ["/app/history", "/app/strategies"]
+VOLUME ["/app/history", "/app/strategies", "/app/config"]
 EXPOSE ${PORT}
 CMD ["--config", "config.js", "--ui"]
